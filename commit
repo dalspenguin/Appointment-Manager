@@ -7,5 +7,5 @@ fi
 
 # stage the whole wrking tree
 git add -u :/
-git commit -m "$1"
+git commit -am "$1"
 git push -u origin master
