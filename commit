@@ -6,6 +6,6 @@ if [ -z "$1"]
 fi
 
 # stage the whole wrking tree
-git add -u :/
+git add -A :/
 git commit -am "$1"
 git push -u origin master
