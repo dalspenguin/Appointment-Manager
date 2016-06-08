@@ -23,21 +23,24 @@ public class PaymentSessionBean implements PaymentSessionBeanRemote {
 	
 
 	@Override
-	public void createPayment(Payment p) {
+	public Payment createPayment(Payment p) {
 		em.persist(p);
+		return p;
 		
 	}
 
 
 	@Override
-	public void createPayment(Date d, double a) {
-		em.persist(new Payment(d, a));
+	public Payment createPayment(Date d, double a) {
+		Payment p =new Payment(d, a); 
+		em.persist(p);
+		return p;
 	}
 
 	
 	@Override
-	public Payment getPayment(int id) {
-		return em.find(Payment.class,id);
+	public Payment getPayment(String string) {
+		return em.find(Payment.class,string);
 	}
 
 	@Override

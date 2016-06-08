@@ -39,10 +39,21 @@ public class Payment implements Serializable {
 	
 
 
+	@Override
+	public String toString() {
+		return "Payment [id=" + id + ", date=" + date + ", amount=" + amount + "]";
+	}
+
+
 	public Payment(Date date, double amount) {
 		super();
 		this.date = date;
 		this.amount = amount;
+	}
+	
+	public Payment(){
+		super();
+		
 	}
 
 
