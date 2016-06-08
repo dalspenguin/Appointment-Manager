@@ -18,4 +18,4 @@ start JBoss:
 But before, stop tomcat on port 8080:
 
 
-sudo service tomcat7 stop 
+sudo service tomcat7 stop  
