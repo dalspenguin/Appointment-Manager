@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.thareau.entity;
+package com.cbse.entity;
 
 import java.io.Serializable;
 import java.util.Date;

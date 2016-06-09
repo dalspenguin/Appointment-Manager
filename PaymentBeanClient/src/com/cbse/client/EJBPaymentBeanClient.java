@@ -1,4 +1,4 @@
-package com.thareau.client;
+package com.cbse.client;
 
 
 import java.text.ParseException;
@@ -7,11 +7,11 @@ import java.util.Date;
 
 import javax.naming.Context;
 import javax.naming.NamingException;
- 
-import com.thareau.businesslogic.PaymentSessionBean;
-import com.thareau.businesslogic.PaymentSessionBeanRemote;
-import com.thareau.clientutility.ClientUtility;
-import com.thareau.entity.Payment;
+
+import com.cbse.businesslogic.PaymentSessionBean;
+import com.cbse.businesslogic.PaymentSessionBeanRemote;
+import com.cbse.clientutility.ClientUtility;
+import com.cbse.entity.Payment;
 
 public class EJBPaymentBeanClient {
 	public static void main(String[] args) {

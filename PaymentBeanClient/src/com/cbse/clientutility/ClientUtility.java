@@ -1,4 +1,4 @@
-package com.thareau.clientutility;
+package com.cbse.clientutility;
 
 import java.util.Properties;
 import javax.naming.Context;

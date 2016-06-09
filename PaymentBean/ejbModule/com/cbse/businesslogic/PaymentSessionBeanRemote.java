@@ -1,4 +1,4 @@
-package com.thareau.businesslogic;
+package com.cbse.businesslogic;
 
 import java.util.Date;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.ejb.Remote;
 
-import com.thareau.entity.Payment;
+import com.cbse.entity.Payment;
 
 @Remote
 public interface PaymentSessionBeanRemote {

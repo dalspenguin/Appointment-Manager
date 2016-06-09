@@ -1,4 +1,4 @@
-package com.thareau.businesslogic;
+package com.cbse.businesslogic;
 
 import java.util.Date;
 import java.util.List;
@@ -8,7 +8,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.thareau.entity.Payment;
+import com.cbse.entity.Payment;
 
 /**
  * Session Bean implementation class PaymentSessionBean
