@@ -8,11 +8,11 @@ import com.cbse.entity.Customer;
 @Remote
 public interface CustomerRegistryBeanRemote {
 	public void createCustomer(String name, Address a);
-	public CustomerRegistryBeanRemote createUser();
-	public CustomerRegistryBeanRemote setName(String name);
-	public CustomerRegistryBeanRemote setStreet(String street);
-	public CustomerRegistryBeanRemote setCity(String city);
-	public CustomerRegistryBeanRemote setZipCode(String zip);
+	public void createCustomer();
+	public void setName(String name);
+	public void  setStreet(String street);
+	public void  setCity(String city);
+	public void  setZipCode(String zip);
 	public Customer build();
 	
 	

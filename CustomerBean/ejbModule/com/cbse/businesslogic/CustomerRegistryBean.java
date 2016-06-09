@@ -35,32 +35,27 @@ public class CustomerRegistryBean implements CustomerRegistryBeanRemote {
 	}
 
 	@Override
-	public CustomerRegistryBeanRemote createUser() {
-		return this;
+	public void createCustomer() {
 	}
 
 	@Override
-	public CustomerRegistryBeanRemote setName(String name) {
+	public void setName(String name) {
 		this.name =name;	 
-		return this;
 	}
 
 	@Override
-	public CustomerRegistryBeanRemote setStreet(String street) {
+	public void setStreet(String street) {
 		this.street = street;
-		return this;
 	}
 
 	@Override
-	public CustomerRegistryBeanRemote setCity(String city) {
+	public void setCity(String city) {
 		this.city = city;
-		return this;
 	}
 
 	@Override
-	public CustomerRegistryBeanRemote setZipCode(String zip) {
+	public void setZipCode(String zip) {
 		this.zip = zip;
-		return this;
 	}
 
 	@Override
