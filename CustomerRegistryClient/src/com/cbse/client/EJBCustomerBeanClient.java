@@ -1,10 +1,5 @@
 package com.cbse.client;
 
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.naming.Context;
 import javax.naming.NamingException;
 
@@ -18,19 +13,7 @@ public class EJBCustomerBeanClient {
 		
 
 		CustomerRegistryBeanRemote bean = doLookup();
-		
-		SimpleDateFormat dateformat2 = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
 
-		String strdate2 = "01-11-2013 12:00:00";
-		Date d = null;
-		try {
-			d = dateformat2.parse(strdate2);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-
-		//Customer c = 
-		
 		bean.createCustomer();
 		bean	.setName("Toto");
 		bean	.setStreet("Parisstrasse");

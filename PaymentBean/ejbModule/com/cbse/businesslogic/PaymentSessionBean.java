@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import com.cbse.entity.Customer;
 import com.cbse.entity.Payment;
 
 /**
@@ -46,6 +47,14 @@ public class PaymentSessionBean implements PaymentSessionBeanRemote {
 	@Override
 	public List<Payment> getPayments() {
 		return em.createQuery("select object(o) from payments as o").getResultList();
+	}
+
+
+	@Override
+	public Payment createPayment(Date d, double a, Customer c) {
+		Payment p = new Payment(d, a, c);
+		em.persist(p);
+		return p;
 	}
 
 

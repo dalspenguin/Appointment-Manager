@@ -2,7 +2,9 @@ package com.cbse.entity;
 
 
 import java.io.Serializable;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -13,6 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.ws.rs.Produces;
@@ -49,11 +52,20 @@ public class Customer implements Serializable{
 	private Address address;
 
 
-	//private List<Payment> payments;
+	@OneToMany(mappedBy = "customer_id", fetch = FetchType.LAZY)
+    private List<Payment> payments;
 
 	//@Basic
 	//@Column(name="street")
 	//private List<Order> orders;
+
+	public List<Payment> getPayments() {
+		return payments;
+	}
+
+	public void setPayments(List<Payment> payments) {
+		this.payments = payments;
+	}
 
 	/*   public List<Order> getOrders() {
         return orders;
@@ -105,7 +117,7 @@ public class Customer implements Serializable{
 		this.name = name;
 		this.address = address;
 		approved =false;
-
+		payments = new ArrayList<Payment>();
 	}
 
 	public Customer() {
@@ -113,6 +125,7 @@ public class Customer implements Serializable{
 		this.name = "";
 		this.address = new Address();
 		this.approved = false;
+		payments = new ArrayList<Payment>();
 	}
 
 	@Override
